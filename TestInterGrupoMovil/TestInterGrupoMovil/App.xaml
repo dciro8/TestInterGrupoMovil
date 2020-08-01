@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:infra="clr-namespace:TestInterGrupoMovil.Infraestructure;assembly=TestInterGrupoMovil"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:TestInterGrupoMovil.ViewModel"
+             x:Class="TestInterGrupoMovil.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="comicsansms" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="comic-sans-ms_[allfont.es]"/>
+                <On Platform="Android" Value="comic-sans-ms_[allfont.es].ttf#comic-sans-ms_[allfont.es]"/>
+            </OnPlatform>
+
+            <OnPlatform x:Key="MontserratBold" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Montserrat-Bold"/>
+                <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold"/>
+            </OnPlatform>
+
+
+            <OnPlatform x:Key="MontserratItalic" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Montserrat-Italic"/>
+                <On Platform="Android" Value="Montserrat-Italic.ttf#Montserrat-Italic"/>
+            </OnPlatform>
+
+        </ResourceDictionary>
+        <!--<infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>-->
+        <vm:ViewModelLocator x:Key="Locator"/>
+
+    </Application.Resources>
+</Application>
